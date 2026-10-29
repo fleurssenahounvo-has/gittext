@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b3d33">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Annuaire du travail en ligne">
+<meta property="og:description" content="Découvrez des plateformes de freelance, télétravail, micro-tâches, cours et formations.">
+<title>Annuaire du travail en ligne</title>
+<meta name="description" content="Annuaire des meilleures plateformes pour travailler en ligne : freelance, télétravail, micro-tâches, enseignement et formation.">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+.suggestion-form{display:grid;gap:.65rem;max-width:680px}.suggestion-form label{font-weight:700;margin-top:.35rem}.suggestion-form input,.suggestion-form select,.suggestion-form textarea{width:100%;font:inherit;padding:.8rem;border:1px solid #cbd5d1;border-radius:10px;background:#fff;color:#17211e}.suggestion-form button:disabled{opacity:.6;cursor:wait}#formStatus{min-height:1.4em}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu principal</a>
+<nav><div class="wrap"><a class="brand" href="#haut"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0b6b57"/><g fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"><circle cx="32" cy="32" r="16"/><ellipse cx="32" cy="32" rx="7" ry="16"/><path d="M16 32h32"/></g><circle cx="48" cy="16" r="6" fill="#f2b134" stroke="#0b6b57" stroke-width="3"/></svg>Annuaire du travail en ligne</a>
+<div class="links"><a href="#categories">Catégories</a><a href="#conseils">Conseils</a><a href="#faq">Questions</a><a href="#contact">Contact</a></div></div></nav>
+
+<header class="hero" id="haut"><div class="wrap">
+<h1>Annuaire du travail en ligne</h1>
+<p>Plateformes de freelance, offres en télétravail, micro-tâches, enseignement et formation : une sélection de sites reconnus, classée par type d’activité.</p>
+<input class="search" id="q" type="search" placeholder="Rechercher un site ou un métier (ex. rédaction, design, Fiverr)" aria-label="Rechercher un site">
+<div class="stats"><div><b id="nsites">0</b><span>sites référencés</span></div><div><b id="ncats">0</b><span>catégories</span></div></div>
+</div></header>
+
+<main class="wrap" id="contenu">
+<div class="block" id="categories"><h2>Choisissez une catégorie</h2><p class="sub">Cliquez sur une catégorie pour ne voir que ses sites.</p><div class="tiles" id="tiles"></div></div>
+<div class="bar"><p class="count" id="count" aria-live="polite"></p><div class="bar-actions"><button class="favorites-toggle" id="favoritesToggle" type="button" aria-pressed="false">☆ Mes favoris</button><button class="reset" id="reset" type="button" hidden>Tout afficher</button></div></div>
+<div id="list"></div>
+
+<div class="block" id="conseils"><h2>Avant de vous inscrire</h2><p class="sub">Le travail en ligne attire aussi les arnaqueurs. Quelques réflexes simples.</p>
+<div class="tips">
+<div><b>Ne payez jamais pour être embauché</b><span>Un vrai employeur ne demande pas d’argent pour vous donner un poste.</span></div>
+<div><b>Méfiez-vous des gains faciles</b><span>Les promesses de revenus rapides et élevés sont presque toujours fausses.</span></div>
+<div><b>Protégez vos données</b><span>Ne donnez ni codes bancaires ni pièce d’identité avant d’avoir vérifié l’entreprise.</span></div>
+<div><b>Lisez les conditions</b><span>Vérifiez les frais, les délais de paiement et les pays acceptés.</span></div>
+</div></div>
+
+<div class="block" id="contact"><h2>Proposer une plateforme</h2><p class="sub">Suggérez un site à ajouter à l’annuaire. Chaque proposition est enregistrée en attente de vérification.</p>
+<form class="contact suggestion-form" id="suggestionForm">
+<label for="suggestionName">Nom de la plateforme *</label><input id="suggestionName" name="name" required maxlength="120" placeholder="Ex. Ma plateforme de freelance">
+<label for="suggestionUrl">Adresse du site *</label><input id="suggestionUrl" name="url" type="url" required maxlength="500" placeholder="https://exemple.com">
+<label for="suggestionCategory">Catégorie *</label><select id="suggestionCategory" name="category_slug" required><option value="">Choisir une catégorie</option><option value="freelance">Freelance généraliste</option><option value="emploi">Emploi à distance</option><option value="microtaches">Micro-tâches et études</option><option value="redaction">Rédaction et traduction</option><option value="creation">Design et création</option><option value="enseignement">Enseignement et cours en ligne</option><option value="formation">Se former gratuitement</option><option value="afrique">Plateformes francophones et africaines</option></select>
+<label for="suggestionDescription">Description *</label><textarea id="suggestionDescription" name="description" required maxlength="1000" rows="4" placeholder="Expliquez ce que propose cette plateforme"></textarea>
+<label for="suggestionEmail">Votre e-mail (facultatif)</label><input id="suggestionEmail" name="email" type="email" maxlength="254" placeholder="vous@exemple.com">
+<button class="cta" type="submit">Envoyer la suggestion</button><p id="formStatus" role="status" aria-live="polite"></p>
+</form></div>
+
+<div class="block" id="faq"><h2>Questions fréquentes</h2><p class="sub">Des réponses rapides pour vous aider à choisir une plateforme.</p>
+<details><summary>Ces sites sont-ils gratuits ?</summary><p>L’inscription est gratuite sur la plupart d’entre eux, mais certains prélèvent une commission sur vos gains ou proposent un abonnement payant.</p></details>
+<details><summary>Puis-je y travailler depuis n’importe quel pays ?</summary><p>Pas toujours. Chaque plateforme fixe ses propres pays acceptés et ses moyens de paiement. Vérifiez-les avant de créer votre profil.</p></details>
+<details><summary>Par où commencer quand on débute ?</summary><p>Choisissez une compétence précise, créez un profil soigné sur une ou deux plateformes de freelance et proposez de petites missions. Si besoin, commencez par la catégorie « Se former gratuitement ».</p></details>
+<details><summary>Les micro-tâches permettent-elles de vivre de son travail ?</summary><p>En général non : les revenus restent modestes. Elles conviennent surtout comme complément.</p></details>
+</div>
+</main>
+
+<footer><div class="wrap"><p>© <span id="year"></span> Annuaire du travail en ligne. Les conditions, frais et pays acceptés changent d’une plateforme à l’autre. Vérifiez toujours sur le site officiel avant de vous inscrire.</p><span><a href="mailto:fleurssenahounvo@gmail.com">fleurssenahounvo@gmail.com</a> · <a href="#haut">Retour en haut</a></span></div></footer>
+
+
+
+<script src="js/app.js" defer></script>
+</body>
+</html>

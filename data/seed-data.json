@@ -1,0 +1,334 @@
+{
+  "categories": [
+    {
+      "slug": "freelance",
+      "name": "Freelance généraliste",
+      "description": "Proposez vos services et trouvez des missions ponctuelles ou régulières.",
+      "sort_order": 0
+    },
+    {
+      "slug": "emploi",
+      "name": "Emploi à distance",
+      "description": "Offres de postes en télétravail, à temps plein ou partiel.",
+      "sort_order": 1
+    },
+    {
+      "slug": "microtaches",
+      "name": "Micro-tâches et études",
+      "description": "Petites tâches, tests et sondages rémunérés. Les revenus restent modestes.",
+      "sort_order": 2
+    },
+    {
+      "slug": "redaction",
+      "name": "Rédaction et traduction",
+      "description": "Écrire, relire, traduire.",
+      "sort_order": 3
+    },
+    {
+      "slug": "creation",
+      "name": "Design et création",
+      "description": "Graphisme, vidéo, illustration, portfolio.",
+      "sort_order": 4
+    },
+    {
+      "slug": "enseignement",
+      "name": "Enseignement et cours en ligne",
+      "description": "Donner des cours de langues, de soutien ou de compétences.",
+      "sort_order": 5
+    },
+    {
+      "slug": "formation",
+      "name": "Se former gratuitement",
+      "description": "Acquérir des compétences demandées avant de candidater.",
+      "sort_order": 6
+    },
+    {
+      "slug": "afrique",
+      "name": "Plateformes francophones et africaines",
+      "description": "Pour trouver des offres plus proches de votre région.",
+      "sort_order": 7
+    }
+  ],
+  "platforms": [
+    {
+      "name": "Upwork",
+      "url": "https://www.upwork.com",
+      "description": "Grande place de marché mondiale : développement, rédaction, design, assistance.",
+      "category_slug": "freelance",
+      "sort_order": 0
+    },
+    {
+      "name": "Fiverr",
+      "url": "https://www.fiverr.com",
+      "description": "Vendez des services à partir d’un prix fixe, appelés « gigs ».",
+      "category_slug": "freelance",
+      "sort_order": 1
+    },
+    {
+      "name": "Freelancer",
+      "url": "https://www.freelancer.com",
+      "description": "Concours et projets dans de nombreux domaines.",
+      "category_slug": "freelance",
+      "sort_order": 2
+    },
+    {
+      "name": "PeoplePerHour",
+      "url": "https://www.peopleperhour.com",
+      "description": "Missions pour les indépendants, orientées marketing et création.",
+      "category_slug": "freelance",
+      "sort_order": 3
+    },
+    {
+      "name": "Malt",
+      "url": "https://www.malt.fr",
+      "description": "Plateforme européenne de freelances, forte en France.",
+      "category_slug": "freelance",
+      "sort_order": 4
+    },
+    {
+      "name": "Codeur.com",
+      "url": "https://www.codeur.com",
+      "description": "Projets web et digitaux en français.",
+      "category_slug": "freelance",
+      "sort_order": 5
+    },
+    {
+      "name": "ComeUp",
+      "url": "https://comeup.com",
+      "description": "Services à partir de quelques euros, en français.",
+      "category_slug": "freelance",
+      "sort_order": 6
+    },
+    {
+      "name": "Remote OK",
+      "url": "https://remoteok.com",
+      "description": "Offres 100 % à distance, surtout tech et marketing.",
+      "category_slug": "emploi",
+      "sort_order": 0
+    },
+    {
+      "name": "We Work Remotely",
+      "url": "https://weworkremotely.com",
+      "description": "Une des plus grandes communautés d’emplois à distance.",
+      "category_slug": "emploi",
+      "sort_order": 1
+    },
+    {
+      "name": "Remotive",
+      "url": "https://remotive.com",
+      "description": "Offres remote vérifiées par l’équipe.",
+      "category_slug": "emploi",
+      "sort_order": 2
+    },
+    {
+      "name": "Working Nomads",
+      "url": "https://www.workingnomads.com",
+      "description": "Offres sélectionnées pour les nomades numériques.",
+      "category_slug": "emploi",
+      "sort_order": 3
+    },
+    {
+      "name": "FlexJobs",
+      "url": "https://www.flexjobs.com",
+      "description": "Offres contrôlées manuellement, accès payant.",
+      "category_slug": "emploi",
+      "sort_order": 4
+    },
+    {
+      "name": "Welcome to the Jungle",
+      "url": "https://www.welcometothejungle.com",
+      "description": "Offres et présentation des entreprises, avec filtre télétravail.",
+      "category_slug": "emploi",
+      "sort_order": 5
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/jobs",
+      "description": "Réseau professionnel avec filtre « à distance ».",
+      "category_slug": "emploi",
+      "sort_order": 6
+    },
+    {
+      "name": "Indeed",
+      "url": "https://www.indeed.com",
+      "description": "Moteur d’offres d’emploi, avec recherche par télétravail.",
+      "category_slug": "emploi",
+      "sort_order": 7
+    },
+    {
+      "name": "Amazon Mechanical Turk",
+      "url": "https://www.mturk.com",
+      "description": "Petites tâches rémunérées à l’unité.",
+      "category_slug": "microtaches",
+      "sort_order": 0
+    },
+    {
+      "name": "Clickworker",
+      "url": "https://www.clickworker.com",
+      "description": "Micro-tâches : saisie, catégorisation, enquêtes.",
+      "category_slug": "microtaches",
+      "sort_order": 1
+    },
+    {
+      "name": "Prolific",
+      "url": "https://www.prolific.com",
+      "description": "Études académiques rémunérées.",
+      "category_slug": "microtaches",
+      "sort_order": 2
+    },
+    {
+      "name": "Appen",
+      "url": "https://www.appen.com",
+      "description": "Évaluation de données pour l’intelligence artificielle.",
+      "category_slug": "microtaches",
+      "sort_order": 3
+    },
+    {
+      "name": "UserTesting",
+      "url": "https://www.usertesting.com",
+      "description": "Tester des sites et applications en donnant son avis.",
+      "category_slug": "microtaches",
+      "sort_order": 4
+    },
+    {
+      "name": "Textbroker",
+      "url": "https://www.textbroker.com",
+      "description": "Commandes de textes web par niveau de qualité.",
+      "category_slug": "redaction",
+      "sort_order": 0
+    },
+    {
+      "name": "ProZ",
+      "url": "https://www.proz.com",
+      "description": "Réseau de traducteurs et d’interprètes.",
+      "category_slug": "redaction",
+      "sort_order": 1
+    },
+    {
+      "name": "Redacteur.com",
+      "url": "https://www.redacteur.com",
+      "description": "Plateforme francophone de rédaction web.",
+      "category_slug": "redaction",
+      "sort_order": 2
+    },
+    {
+      "name": "Medium",
+      "url": "https://medium.com",
+      "description": "Publier des articles et être rémunéré via le programme partenaire.",
+      "category_slug": "redaction",
+      "sort_order": 3
+    },
+    {
+      "name": "99designs",
+      "url": "https://99designs.com",
+      "description": "Concours de logos et d’identités visuelles.",
+      "category_slug": "creation",
+      "sort_order": 0
+    },
+    {
+      "name": "Dribbble",
+      "url": "https://dribbble.com",
+      "description": "Portfolio de designers et offres d’emploi créatives.",
+      "category_slug": "creation",
+      "sort_order": 1
+    },
+    {
+      "name": "Behance",
+      "url": "https://www.behance.net",
+      "description": "Portfolio créatif d’Adobe et offres associées.",
+      "category_slug": "creation",
+      "sort_order": 2
+    },
+    {
+      "name": "Canva",
+      "url": "https://www.canva.com",
+      "description": "Outil de création, utile pour proposer des visuels.",
+      "category_slug": "creation",
+      "sort_order": 3
+    },
+    {
+      "name": "Preply",
+      "url": "https://preply.com",
+      "description": "Enseigner des langues en visio.",
+      "category_slug": "enseignement",
+      "sort_order": 0
+    },
+    {
+      "name": "Superprof",
+      "url": "https://www.superprof.fr",
+      "description": "Annonces de cours particuliers dans toutes les matières.",
+      "category_slug": "enseignement",
+      "sort_order": 1
+    },
+    {
+      "name": "Wyzant",
+      "url": "https://www.wyzant.com",
+      "description": "Tutorat en ligne.",
+      "category_slug": "enseignement",
+      "sort_order": 2
+    },
+    {
+      "name": "Udemy",
+      "url": "https://www.udemy.com",
+      "description": "Créer et vendre ses propres cours.",
+      "category_slug": "enseignement",
+      "sort_order": 3
+    },
+    {
+      "name": "Coursera",
+      "url": "https://www.coursera.org",
+      "description": "Cours universitaires, certificats payants ou aide financière.",
+      "category_slug": "formation",
+      "sort_order": 0
+    },
+    {
+      "name": "OpenClassrooms",
+      "url": "https://openclassrooms.com",
+      "description": "Cours en français, parcours métiers.",
+      "category_slug": "formation",
+      "sort_order": 1
+    },
+    {
+      "name": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org",
+      "description": "Apprendre la programmation gratuitement.",
+      "category_slug": "formation",
+      "sort_order": 2
+    },
+    {
+      "name": "Google Digital Garage",
+      "url": "https://learndigital.withgoogle.com/digitalgarage",
+      "description": "Initiation au marketing digital.",
+      "category_slug": "formation",
+      "sort_order": 3
+    },
+    {
+      "name": "HubSpot Academy",
+      "url": "https://academy.hubspot.com",
+      "description": "Formations gratuites en marketing et vente.",
+      "category_slug": "formation",
+      "sort_order": 4
+    },
+    {
+      "name": "Jobberman",
+      "url": "https://www.jobberman.com",
+      "description": "Offres d’emploi, surtout au Nigeria.",
+      "category_slug": "afrique",
+      "sort_order": 0
+    },
+    {
+      "name": "Emploi Afrique",
+      "url": "https://www.emploi.net",
+      "description": "Offres d’emploi en Afrique francophone.",
+      "category_slug": "afrique",
+      "sort_order": 1
+    },
+    {
+      "name": "Africawork",
+      "url": "https://www.africawork.com",
+      "description": "Annonces d’emploi en Afrique francophone.",
+      "category_slug": "afrique",
+      "sort_order": 2
+    }
+  ]
+}
