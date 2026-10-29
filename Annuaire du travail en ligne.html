@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Annuaire du travail en ligne</title>
+<meta name="description" content="Annuaire des meilleures plateformes pour travailler en ligne : freelance, télétravail, micro-tâches, enseignement et formation.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f3f6f4;--surface:#fff;--ink:#14231d;--muted:#566a61;--line:#d5dfda;--accent:#0b6b57;--accent-ink:#fff;--tag:#e3efe9;--hero:#0b3d33;--hero-ink:#eaf6f1;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a16;--surface:#16241e;--ink:#e8f0ec;--muted:#98ada3;--line:#27382f;--accent:#4fc3a1;--accent-ink:#06201a;--tag:#1d3128;--hero:#0a241e}}
+:root[data-theme="dark"]{--bg:#0f1a16;--surface:#16241e;--ink:#e8f0ec;--muted:#98ada3;--line:#27382f;--accent:#4fc3a1;--accent-ink:#06201a;--tag:#1d3128;--hero:#0a241e}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Instrument Sans",system-ui,sans-serif;line-height:1.55}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--surface);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:1.15rem;color:var(--ink);text-decoration:none}
+.brand svg{width:34px;height:34px;flex:none}
+.links{display:flex;gap:20px}
+.links a{color:var(--muted);text-decoration:none;font-weight:500;font-size:.95rem}
+.links a:hover{color:var(--accent)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surface);z-index:11}
+.hero{background:var(--hero);color:var(--hero-ink);padding:64px 0 56px}
+h1{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:clamp(2.3rem,6vw,4rem);line-height:1.02;margin:0 0 16px;letter-spacing:-.02em}
+.hero p{max-width:56ch;margin:0 0 26px;font-size:1.1rem;opacity:.88}
+.search{width:100%;max-width:620px;padding:15px 18px;font:inherit;font-size:1.02rem;border:2px solid transparent;border-radius:12px;background:#fff;color:#14231d}
+.search:focus,.chip:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #7fe0c2;outline-offset:2px}
+.stats{display:flex;gap:34px;margin-top:30px;flex-wrap:wrap}
+.stats b{display:block;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.9rem;line-height:1}
+.stats span{font-size:.9rem;opacity:.8}
+h2{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.6rem;margin:0 0 6px}
+.block{padding:44px 0 0}
+.sub{color:var(--muted);margin:0 0 16px;max-width:64ch}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.tile{font:inherit;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;cursor:pointer;color:var(--ink)}
+.tile:hover{border-color:var(--accent)}
+.tile b{display:block;font-size:1.02rem}
+.tile span{color:var(--muted);font-size:.88rem}
+.tile[aria-pressed="true"]{border:2px solid var(--accent);padding:15px}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:34px 0 4px;flex-wrap:wrap}
+.count{color:var(--muted);font-size:.93rem;margin:0}
+.reset{font:inherit;background:none;border:none;color:var(--accent);font-weight:600;cursor:pointer;padding:4px 0}
+section.cat{margin-top:26px}
+section.cat h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.3rem;margin:0 0 2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.card h4{margin:0;font-size:1.05rem;font-weight:600}
+.card p{margin:0;color:var(--muted);font-size:.93rem;flex:1}
+.card a{align-self:flex-start;margin-top:8px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:.9rem;padding:7px 14px;border-radius:8px}
+.card a:hover{opacity:.9}
+.empty{padding:30px 0;color:var(--muted)}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.contact p{margin:0;color:var(--muted);max-width:56ch}
+.cta{background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:12px 20px;border-radius:10px}
+.cta:hover{opacity:.9}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.tips div{background:var(--surface);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:14px 16px}
+.tips b{display:block;margin-bottom:2px}
+.tips span{color:var(--muted);font-size:.93rem}
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+details p{margin:10px 0 0;color:var(--muted)}
+footer{margin-top:56px;background:var(--hero);color:var(--hero-ink);padding:30px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.9rem}
+footer p{margin:0;opacity:.85;max-width:62ch}
+footer a{color:var(--hero-ink)}
+@media (max-width:640px){.links{gap:14px}.links a{font-size:.88rem}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="brand" href="#haut"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0b6b57"/><g fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"><circle cx="32" cy="32" r="16"/><ellipse cx="32" cy="32" rx="7" ry="16"/><path d="M16 32h32"/></g><circle cx="48" cy="16" r="6" fill="#f2b134" stroke="#0b6b57" stroke-width="3"/></svg>Annuaire du travail en ligne</a>
+<div class="links"><a href="#categories">Catégories</a><a href="#conseils">Conseils</a><a href="#faq">Questions</a><a href="#contact">Contact</a></div></div></nav>
+
+<header class="hero" id="haut"><div class="wrap">
+<h1>Annuaire du travail en ligne</h1>
+<p>Plateformes de freelance, offres en télétravail, micro-tâches, enseignement et formation : une sélection de sites reconnus, classée par type d’activité.</p>
+<input class="search" id="q" type="search" placeholder="Rechercher un site ou un métier (ex. rédaction, design, Fiverr)" aria-label="Rechercher un site">
+<div class="stats"><div><b id="nsites">0</b><span>sites référencés</span></div><div><b id="ncats">0</b><span>catégories</span></div></div>
+</div></header>
+
+<main class="wrap">
+<div class="block" id="categories"><h2>Choisissez une catégorie</h2><p class="sub">Cliquez sur une catégorie pour ne voir que ses sites.</p><div class="tiles" id="tiles"></div></div>
+<div class="bar"><p class="count" id="count" aria-live="polite"></p><button class="reset" id="reset" type="button" hidden>Tout afficher</button></div>
+<div id="list"></div>
+
+<div class="block" id="conseils"><h2>Avant de vous inscrire</h2><p class="sub">Le travail en ligne attire aussi les arnaqueurs. Quelques réflexes simples.</p>
+<div class="tips">
+<div><b>Ne payez jamais pour être embauché</b><span>Un vrai employeur ne demande pas d’argent pour vous donner un poste.</span></div>
+<div><b>Méfiez-vous des gains faciles</b><span>Les promesses de revenus rapides et élevés sont presque toujours fausses.</span></div>
+<div><b>Protégez vos données</b><span>Ne donnez ni codes bancaires ni pièce d’identité avant d’avoir vérifié l’entreprise.</span></div>
+<div><b>Lisez les conditions</b><span>Vérifiez les frais, les délais de paiement et les pays acceptés.</span></div>
+</div></div>
+
+<div class="block" id="contact"><h2>Proposer un site ou nous écrire</h2><p class="sub">Vous connaissez une plateforme sérieuse qui manque à l’annuaire, ou un lien qui ne fonctionne plus ? Écrivez-nous.</p>
+<div class="contact"><p>Indiquez le nom du site, son adresse et ce qu’il propose. Nous vérifions chaque suggestion avant de l’ajouter.</p><a class="cta" href="mailto:fleurssenahounvo@gmail.com?subject=Annuaire%20du%20travail%20en%20ligne&body=Nom%20du%20site%20%3A%0AAdresse%20%3A%0ACat%C3%A9gorie%20%3A%0ADescription%20%3A">Envoyer un e-mail</a></div></div>
+
+<div class="block" id="faq"><h2>Questions fréquentes</h2><p class="sub"></p>
+<details><summary>Ces sites sont-ils gratuits ?</summary><p>L’inscription est gratuite sur la plupart d’entre eux, mais certains prélèvent une commission sur vos gains ou proposent un abonnement payant.</p></details>
+<details><summary>Puis-je y travailler depuis n’importe quel pays ?</summary><p>Pas toujours. Chaque plateforme fixe ses propres pays acceptés et ses moyens de paiement. Vérifiez-les avant de créer votre profil.</p></details>
+<details><summary>Par où commencer quand on débute ?</summary><p>Choisissez une compétence précise, créez un profil soigné sur une ou deux plateformes de freelance et proposez de petites missions. Si besoin, commencez par la catégorie « Se former gratuitement ».</p></details>
+<details><summary>Les micro-tâches permettent-elles de vivre de son travail ?</summary><p>En général non : les revenus restent modestes. Elles conviennent surtout comme complément.</p></details>
+</div>
+</main>
+
+<footer><div class="wrap"><p>Annuaire indicatif : les conditions, frais et pays acceptés changent d’une plateforme à l’autre. Vérifiez toujours sur le site officiel avant de vous inscrire.</p><span><a href="mailto:fleurssenahounvo@gmail.com">fleurssenahounvo@gmail.com</a> · <a href="#haut">Retour en haut</a></span></div></footer>
+
+<script>
+var CATS=[
+{id:"freelance",nom:"Freelance généraliste",desc:"Proposez vos services et trouvez des missions ponctuelles ou régulières.",sites:[
+["Upwork","https://www.upwork.com","Grande place de marché mondiale : développement, rédaction, design, assistance."],
+["Fiverr","https://www.fiverr.com","Vendez des services à partir d’un prix fixe, appelés « gigs »."],
+["Freelancer","https://www.freelancer.com","Concours et projets dans de nombreux domaines."],
+["PeoplePerHour","https://www.peopleperhour.com","Missions pour les indépendants, orientées marketing et création."],
+["Malt","https://www.malt.fr","Plateforme européenne de freelances, forte en France."],
+["Codeur.com","https://www.codeur.com","Projets web et digitaux en français."],
+["ComeUp","https://comeup.com","Services à partir de quelques euros, en français."]]},
+{id:"emploi",nom:"Emploi à distance",desc:"Offres de postes en télétravail, à temps plein ou partiel.",sites:[
+["Remote OK","https://remoteok.com","Offres 100 % à distance, surtout tech et marketing."],
+["We Work Remotely","https://weworkremotely.com","Une des plus grandes communautés d’emplois à distance."],
+["Remotive","https://remotive.com","Offres remote vérifiées par l’équipe."],
+["Working Nomads","https://www.workingnomads.com","Offres sélectionnées pour les nomades numériques."],
+["FlexJobs","https://www.flexjobs.com","Offres contrôlées manuellement, accès payant."],
+["Welcome to the Jungle","https://www.welcometothejungle.com","Offres et présentation des entreprises, avec filtre télétravail."],
+["LinkedIn","https://www.linkedin.com/jobs","Réseau professionnel avec filtre « à distance »."],
+["Indeed","https://www.indeed.com","Moteur d’offres d’emploi, avec recherche par télétravail."]]},
+{id:"microtaches",nom:"Micro-tâches et études",desc:"Petites tâches, tests et sondages rémunérés. Les revenus restent modestes.",sites:[
+["Amazon Mechanical Turk","https://www.mturk.com","Petites tâches rémunérées à l’unité."],
+["Clickworker","https://www.clickworker.com","Micro-tâches : saisie, catégorisation, enquêtes."],
+["Prolific","https://www.prolific.com","Études académiques rémunérées."],
+["Appen","https://www.appen.com","Évaluation de données pour l’intelligence artificielle."],
+["UserTesting","https://www.usertesting.com","Tester des sites et applications en donnant son avis."]]},
+{id:"redaction",nom:"Rédaction et traduction",desc:"Écrire, relire, traduire.",sites:[
+["Textbroker","https://www.textbroker.com","Commandes de textes web par niveau de qualité."],
+["ProZ","https://www.proz.com","Réseau de traducteurs et d’interprètes."],
+["Redacteur.com","https://www.redacteur.com","Plateforme francophone de rédaction web."],
+["Medium","https://medium.com","Publier des articles et être rémunéré via le programme partenaire."]]},
+{id:"creation",nom:"Design et création",desc:"Graphisme, vidéo, illustration, portfolio.",sites:[
+["99designs","https://99designs.com","Concours de logos et d’identités visuelles."],
+["Dribbble","https://dribbble.com","Portfolio de designers et offres d’emploi créatives."],
+["Behance","https://www.behance.net","Portfolio créatif d’Adobe et offres associées."],
+["Canva","https://www.canva.com","Outil de création, utile pour proposer des visuels."]]},
+{id:"enseignement",nom:"Enseignement et cours en ligne",desc:"Donner des cours de langues, de soutien ou de compétences.",sites:[
+["Preply","https://preply.com","Enseigner des langues en visio."],
+["Superprof","https://www.superprof.fr","Annonces de cours particuliers dans toutes les matières."],
+["Wyzant","https://www.wyzant.com","Tutorat en ligne."],
+["Udemy","https://www.udemy.com","Créer et vendre ses propres cours."]]},
+{id:"formation",nom:"Se former gratuitement",desc:"Acquérir des compétences demandées avant de candidater.",sites:[
+["Coursera","https://www.coursera.org","Cours universitaires, certificats payants ou aide financière."],
+["OpenClassrooms","https://openclassrooms.com","Cours en français, parcours métiers."],
+["freeCodeCamp","https://www.freecodecamp.org","Apprendre la programmation gratuitement."],
+["Google Digital Garage","https://learndigital.withgoogle.com/digitalgarage","Initiation au marketing digital."],
+["HubSpot Academy","https://academy.hubspot.com","Formations gratuites en marketing et vente."]]},
+{id:"afrique",nom:"Plateformes francophones et africaines",desc:"Pour trouver des offres plus proches de votre région.",sites:[
+["Jobberman","https://www.jobberman.com","Offres d’emploi, surtout au Nigeria."],
+["Emploi Afrique","https://www.emploi.net","Offres d’emploi en Afrique francophone."],
+["Africawork","https://www.africawork.com","Annonces d’emploi en Afrique francophone."]]}
+];
+var etat={cat:"tous",q:""};
+var tiles=document.getElementById("tiles"),list=document.getElementById("list"),count=document.getElementById("count"),reset=document.getElementById("reset");
+function norm(s){return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")}
+document.getElementById("nsites").textContent=CATS.reduce(function(n,c){return n+c.sites.length},0);
+document.getElementById("ncats").textContent=CATS.length;
+function dessinerTuiles(){
+ tiles.innerHTML="";
+ CATS.forEach(function(c){
+  var b=document.createElement("button");b.type="button";b.className="tile";
+  b.setAttribute("aria-pressed",String(etat.cat===c.id));
+  b.innerHTML="<b></b><span></span>";b.querySelector("b").textContent=c.nom;
+  b.querySelector("span").textContent=c.sites.length+" sites";
+  b.onclick=function(){etat.cat=(etat.cat===c.id?"tous":c.id);rendre();if(etat.cat!=="tous")list.scrollIntoView({behavior:"smooth"})};
+  tiles.appendChild(b)});
+}
+function rendre(){
+ dessinerTuiles();list.innerHTML="";var total=0,q=norm(etat.q.trim());
+ CATS.forEach(function(c){
+  if(etat.cat!=="tous"&&etat.cat!==c.id)return;
+  var s=c.sites.filter(function(x){return !q||norm(x[0]+" "+x[2]+" "+c.nom).indexOf(q)>-1});
+  if(!s.length)return;total+=s.length;
+  var sec=document.createElement("section");sec.className="cat";
+  sec.innerHTML="<h3></h3><p class='sub'></p><div class='grid'></div>";
+  sec.querySelector("h3").textContent=c.nom;sec.querySelector(".sub").textContent=c.desc;
+  var g=sec.querySelector(".grid");
+  s.forEach(function(x){
+   var d=document.createElement("article");d.className="card";
+   d.innerHTML="<h4></h4><p></p><a target='_blank' rel='noopener noreferrer'>Visiter le site</a>";
+   d.querySelector("h4").textContent=x[0];d.querySelector("p").textContent=x[2];
+   var a=d.querySelector("a");a.href=x[1];a.setAttribute("aria-label","Visiter le site "+x[0]);
+   g.appendChild(d)});
+  list.appendChild(sec)});
+ count.textContent=total+(total>1?" sites affichés":" site affiché");
+ reset.hidden=(etat.cat==="tous"&&!q);
+ if(!total)list.innerHTML="<p class='empty'>Aucun résultat. Essayez un autre mot ou cliquez sur « Tout afficher ».</p>";
+}
+document.getElementById("q").addEventListener("input",function(e){etat.q=e.target.value;rendre()});
+reset.onclick=function(){etat.cat="tous";etat.q="";document.getElementById("q").value="";rendre()};
+rendre();
+</script>
+</body>
+</html>
